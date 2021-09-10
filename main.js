@@ -17,8 +17,11 @@ function guessGame() {
         output.innerHTML = "Sorry, you guessed to low";
         attempts++
     }
+    if (attempts === 3) {
+        output.innerHTML = "Sorry, you ran out of attempts! The correct number is " + randomNum;
+    }
 
-    
+      return false;
 
 }
 
