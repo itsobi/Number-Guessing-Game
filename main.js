@@ -1,7 +1,7 @@
 let randomNum = Math.floor(Math.random() * 100) + 1;
 let attempts = 0;
 let output = document.getElementById("output-text");
-let final_text = document.getElementById("final");
+
 
 function guessGame() {
     let input = document.getElementById("number").value;
@@ -20,7 +20,7 @@ function guessGame() {
     }
     if (attempts === 3) {
         output.innerHTML = "Sorry, you ran out of attempts! The correct number is " + randomNum;
-        final_text.innerHTML = "Refresh page to play again!"
+        
         
         
     }
@@ -29,10 +29,13 @@ function guessGame() {
 
 }
 
-// function resetGame() {
-//     randomNum.reset();
-//     attempts.reset();
-// }
+function resetGame() {
+    console.log("hey");
+    randomNum = Math.floor(Math.random() * 100) + 1;
+    attempts = 0;
+    document.getElementById("output-text").innerHTML = "";
+}
+
 
 
 
