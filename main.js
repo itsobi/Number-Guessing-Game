@@ -30,7 +30,6 @@ function guessGame() {
 }
 
 function resetGame() {
-    console.log("hey");
     randomNum = Math.floor(Math.random() * 100) + 1;
     attempts = 0;
     document.getElementById("output-text").innerHTML = "";
