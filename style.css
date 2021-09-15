@@ -1,0 +1,23 @@
+body {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+form {
+  margin-top: 10px;
+}
+
+button {
+  margin: 5px;
+}
+
+label {
+  font-size: 18px;
+}
+
+#output-text {
+  text-align: center;
+}
