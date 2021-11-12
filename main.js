@@ -4,9 +4,17 @@ let output = document.getElementById("output-text");
 
 
 function guessGame() {
-    let input = document.getElementById("number").value;
+    let input = Number(document.getElementById("number").value);
     
-    
+    console.log(randomNum);
+    console.log(attempts);
+    console.log(input === randomNum);
+    if (attempts === 3) {
+        output.innerHTML = "Sorry, you ran out of attempts! The correct number is " + randomNum;
+        
+        return false;
+    }
+
     if (input === randomNum) {
         output.innerHTML = "Congrats! You guessed the correct number.";
     }
@@ -18,14 +26,7 @@ function guessGame() {
         output.innerHTML = "Sorry, you guessed to low";
         attempts++
     }
-    if (attempts === 3) {
-        output.innerHTML = "Sorry, you ran out of attempts! The correct number is " + randomNum;
-        
-        
-        
-    }
-
-      return false;
+    return false;
 
 }
 
